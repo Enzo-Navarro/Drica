@@ -1,0 +1,404 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+}
+
+.hero {
+    background: no-repeat;
+    background-position: center top;
+    background-size: cover; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #e91e63;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sobre, .servicos, .galeria, .contato {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre .container, .servicos .container, .galeria .container, .contato .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.servico-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.videoloc {
+    margin-top: 10px;
+    height: auto;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button.btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (min-width: 1120px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 140vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 40%;
+    }
+}
+
+@media (max-width: 1120px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 120vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 40%;
+    }
+}
+
+@media (max-width: 1020px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 110vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 100vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 60%;
+    }
+}
+
+@media (max-width: 850px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 90vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 55%;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 80vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 60%;
+    }
+}
+
+@media (max-width: 760px) {
+    .menu ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        background: #333;
+        right: 0;
+        top: 12%;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        gap: 5px;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        background-position: center top;
+        background-size: contain;
+        height: 80vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .servico-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 60%;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 70vh;
+    }
+}
+
+@media (max-width: 620px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 60vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        background: #333;
+        right: 0;
+        top: 12%;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 55vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 50vh;
+    }
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .sobre, .servicos, .galeria, .contato {
+        padding: 30px 10px;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 70%;
+    }
+
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 470px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 50vh;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 410px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 40vh;
+    }
+
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+}
