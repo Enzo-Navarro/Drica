@@ -160,25 +160,44 @@ footer {
     padding: 10px 0;
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1400px) {
     .hero {
         background-size: contain;
-        background-position: center top;
-        height: 140vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 40%;
-    }
-}
-
-@media (max-width: 1120px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
+        background-position: center top; 
         height: 120vh;
     }
+}
+
+@media (max-width: 1400px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 130vh;
+    }
+}
+
+@media (max-width: 1250px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 125vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 120vh;
+    }
+}
+
+@media (max-width: 1150px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 115vh;
+    }
 
     .videoloc {
         height: auto;
@@ -186,7 +205,7 @@ footer {
     }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
     .hero {
         background-size: contain;
         background-position: center top;
@@ -195,7 +214,44 @@ footer {
 
     .videoloc {
         height: auto;
+        width: 40%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 105vh;
+    }
+}
+
+@media (max-width: 1020px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 102vh;
+    }
+
+    .videoloc {
+        height: auto;
         width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 100vh;
+    }
+}
+
+@media (max-width: 950px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 95vh;
     }
 }
 
@@ -203,7 +259,7 @@ footer {
     .hero {
         background-size: contain;
         background-position: center top;
-        height: 100vh;
+        height: 90vh;
     }
 
     .videoloc {
@@ -216,7 +272,7 @@ footer {
     .hero {
         background-size: contain;
         background-position: center top;
-        height: 90vh;
+        height: 84vh;
     }
 
     .videoloc {
@@ -262,7 +318,7 @@ footer {
     .hero {
         background-position: center top;
         background-size: contain;
-        height: 80vh;
+        height: 76vh;
     }
 
     .hero-content h2 {
@@ -295,16 +351,32 @@ footer {
     }
 }
 
+@media (max-width: 650px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 65vh;
+    }
+}
+
 @media (max-width: 620px) {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 60vh;
+        height: 62vh;
     }
 
     .videoloc {
         height: auto;
         width: 70%;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 56vh;
     }
 }
 
@@ -333,7 +405,7 @@ footer {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 55vh;
+        height: 50vh;
     }
 
     .videoloc {
@@ -346,7 +418,7 @@ footer {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 50vh;
+        height: 48vh;
     }
     .hero-content h2 {
         font-size: 1.5rem;
@@ -378,7 +450,7 @@ footer {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 50vh;
+        height: 47vh;
     }
 
     .videoloc {
@@ -387,11 +459,19 @@ footer {
     }
 }
 
+@media (max-width: 450px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 45vh;
+    }
+}
+
 @media (max-width: 410px) {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 40vh;
+        height: 41vh;
     }
 
     footer {
@@ -400,5 +480,21 @@ footer {
         text-align: center;
         padding: 10px 0;
         font-size: 12px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 39vh;
+    }
+}
+
+@media (max-width: 350px) {
+    .hero {
+        background-size: contain;
+        background-position: center top; 
+        height: 35vh;
     }
 }
