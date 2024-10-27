@@ -117,6 +117,46 @@ nav {
     height: auto;
 }
 
+.saiba-mais {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.1rem;
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
+}
+
+/* Efeito ao passar o mouse */
+.saiba-mais:hover {
+    background-color: #e68900; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+/* Efeito ao clicar */
+.saiba-mais:active {
+    transform: scale(0.95); /* Reduz o botão ao clicar */
+}
+
+#imagens-adicionais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px; /* Espaçamento entre o botão e as imagens adicionais */
+}
+
+#imagens-adicionais img {
+    width: 100%;
+    height: auto;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
 .videoloc {
     margin-top: 10px;
     height: auto;
@@ -136,12 +176,23 @@ form input, form textarea {
     margin: 10px 0;
 }
 
-button.btn {
+button.btnn {
+    margin-top: 20px;
     padding: 10px 20px;
-    background: #333;
+    background-color: #333;
     color: #fff;
     border: none;
-    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.1rem;
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
+    
+}
+
+/* Efeito ao passar o mouse */
+.btnn:hover {
+    background-color: green; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão */
 }
 
 footer {

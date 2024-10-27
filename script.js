@@ -14,7 +14,6 @@ menuItems.forEach(item => {
     });
 });
 
-
 const heroSection = document.querySelector('.hero');
 
 // Array com as imagens
@@ -33,6 +32,15 @@ function trocarImagem() {
 
 // Trocar a imagem a cada 3 segundos
 setInterval(trocarImagem, 3000);
+
+const saibaMaisButton = document.getElementById('saiba-mais');
+const imagensAdicionais = document.getElementById('imagens-adicionais');
+
+// Adiciona um evento de clique ao botão "Saiba mais"
+saibaMaisButton.addEventListener('click', () => {
+    imagensAdicionais.classList.toggle('hidden');
+    saibaMaisButton.textContent = imagensAdicionais.classList.contains('hidden') ? 'Saiba mais' : 'Mostrar menos';
+});
 
 function enviarWhatsApp() {
     const nome = document.getElementById('nome').value;
