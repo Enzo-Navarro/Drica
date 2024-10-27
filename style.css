@@ -490,11 +490,11 @@ footer {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 35vh;
+        height: 36vh;
     }
 }
 
