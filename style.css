@@ -81,18 +81,10 @@ nav {
     margin: 20px 0;
 }
 
-.btn {
-    padding: 10px 20px;
-    background: #e91e63;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
 .sobre, .servicos, .galeria, .contato {
     padding: 50px 20px;
     text-align: center;
+    position: center top;
 }
 
 .sobre .container, .servicos .container, .galeria .container, .contato .container {
