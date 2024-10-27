@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -471,7 +470,7 @@ footer {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 41vh;
+        height: 40vh;
     }
 
     footer {
@@ -483,11 +482,11 @@ footer {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 380px) {
     .hero {
         background-size: contain;
         background-position: center top; 
-        height: 39vh;
+        height: 38vh;
     }
 }
 
@@ -496,5 +495,13 @@ footer {
         background-size: contain;
         background-position: center top; 
         height: 35vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero {
+        background-size: contain;
+        background-position: center top;
+        height: 32vh;
     }
 }
