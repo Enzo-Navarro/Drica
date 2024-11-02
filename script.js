@@ -93,13 +93,25 @@ document.querySelector('.todo__searchIcon').addEventListener('click', () => setT
 // Carrega as tarefas ao iniciar a página
 window.onload = loadTasksOnPageLoad;
 
-//parte de celular
 const searchIcon = document.querySelector('.todo__searchIcon');
 
 if (searchIcon) {
-    // Adiciona suporte para clique e toque em dispositivos móveis
-    searchIcon.addEventListener('click', () => setTaskOnScreen());
-    searchIcon.addEventListener('touchstart', () => setTaskOnScreen());
+    // Use eventos de clique e toque separadamente
+    searchIcon.addEventListener('click', setTaskOnScreen);
+    searchIcon.addEventListener('touchstart', (event) => {
+        event.preventDefault(); // Previne possíveis toques duplos
+        setTaskOnScreen();
+    });
 } else {
     console.error("Elemento '.todo__searchIcon' não encontrado.");
 }
+
+searchIcon.addEventListener('click', () => {
+    console.log("Clique detectado no botão +");
+    setTaskOnScreen();
+});
+searchIcon.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+    console.log("Toque detectado no botão +");
+    setTaskOnScreen();
+});
