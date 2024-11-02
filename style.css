@@ -1,550 +1,115 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+.todo {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
-nav {
+.todo__title {
+    text-align: center;
+}
+
+.todo__searchArea {
+    border: 1px solid #000;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
-.logo h1 {
+.todo__searchIcon {
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    border-right: 1px solid #00000062;
+}
+
+.todo__searchIcon:hover {
+    background-color: #EEE;
+}
+
+.todo__searchInput {
+    flex: 1;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.todo__searchInput::placeholder {
+    color: #444;
+}
+
+.todo__list {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-.menu ul {
+.todo__listItem {
+    border: 1px solid #00000062;
+    line-height: 35px;
+    border-radius: 10px;
     display: flex;
-    list-style: none;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.menu ul li {
-    margin-left: 20px;
-}
-
-.menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 5px 0;
-}
-
-.hero {
-    background: no-repeat;
-    background-position: center top;
-    background-size: cover; 
-    height: 100vh; 
+.todo__listCheck .check {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    color: #EEE;
+    margin: 0 10px;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+    font-weight: bolder;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    background-color: #EEE;
+    cursor: pointer;
+    user-select: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
-.hero-content {
-    text-align: center;
+.todo__listCheck .check:hover {
+    color: #CCC;
+    background-color: #CCC;
 }
 
-.hero-content h2 {
-    font-size: 3rem;
+.todo__listCheck .input {
+    display: none;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin: 20px 0;
+.todo__listCheck .input:checked ~ .check {
+    color: #FFF;
+    background-color: #2196F3;
 }
 
-.sobre, .servicos, .galeria, .contato {
-    padding: 50px 20px;
-    text-align: center;
-    position: center top;
-}
-
-.sobre .container, .servicos .container, .galeria .container, .contato .container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.servico-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #f4f4f4;
-    padding: 20px;
-    margin: 10px;
-    flex-basis: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: auto;
-}
-
-.saiba-mais {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+.deleteButton {
+    margin-left: auto;
+    padding: 5px 10px;
+    color: #000;
     border: none;
-    border-radius: 5px; /* Bordas arredondadas */
-    font-size: 1.1rem;
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Efeito ao passar o mouse */
-.saiba-mais:hover {
-    background-color: #e68900; /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Aumenta levemente o botão */
-}
-
-/* Efeito ao clicar */
-.saiba-mais:active {
-    transform: scale(0.95); /* Reduz o botão ao clicar */
-}
-
-#imagens-adicionais {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    margin-top: 20px; /* Espaçamento entre o botão e as imagens adicionais */
-}
-
-#imagens-adicionais img {
-    width: 100%;
-    height: auto;
-}
-
-
-.hidden {
-    display: none !important;
-}
-
-.videoloc {
-    margin-top: 10px;
-    height: auto;
-    width: 50%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input, form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-button.btnn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px; /* Bordas arredondadas */
-    font-size: 1.1rem;
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
-    
-}
-
-/* Efeito ao passar o mouse */
-.btnn:hover {
-    background-color: green; /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Aumenta levemente o botão */
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-@media (min-width: 1400px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 120vh;
-    }
-}
-
-@media (max-width: 1400px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 130vh;
-    }
-}
-
-@media (max-width: 1250px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 125vh;
-    }
-}
-
-@media (max-width: 1200px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 120vh;
-    }
-}
-
-@media (max-width: 1150px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
-        height: 115vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 40%;
-    }
-}
-
-@media (max-width: 1100px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
-        height: 110vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 40%;
-    }
-}
-
-@media (max-width: 1050px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 105vh;
-    }
-}
-
-@media (max-width: 1020px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
-        height: 102vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 60%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 100vh;
-    }
-}
-
-@media (max-width: 950px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 95vh;
-    }
-}
-
-@media (max-width: 900px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
-        height: 90vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 60%;
-    }
-}
-
-@media (max-width: 850px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
-        height: 84vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 55%;
-    }
-}
-
-@media (max-width: 800px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
-        height: 80vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 60%;
-    }
-}
-
-@media (max-width: 760px) {
-    .menu ul {
-        flex-direction: column;
-        display: none;
-        position: absolute;
-        background: #333;
-        right: 0;
-        top: 12%;
-        padding-bottom: 10px;
-        padding-right: 20px;
-        gap: 5px;
-    }
-
-    .menu ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .hero {
-        background-position: center top;
-        background-size: contain;
-        height: 76vh;
-    }
-
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .servico-cards {
-        flex-direction: column;
-    }
-
-    .card {
-        flex-basis: 100%;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 60%;
-    }
-}
-
-@media (max-width: 700px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 70vh;
-    }
-}
-
-@media (max-width: 650px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 65vh;
-    }
-}
-
-@media (max-width: 620px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 62vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 70%;
-    }
-}
-
-@media (max-width: 560px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 56vh;
-    }
-}
-
-@media (max-width: 500px) {
-    .menu ul {
-        flex-direction: column;
-        display: none;
-        position: absolute;
-        background: #333;
-        right: 0;
-        top: 12%;
-        padding-bottom: 10px;
-        padding-right: 15px;
-        gap: 5px;
-        font-size: 14px;
-    }
-
-    .menu ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 50vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 48vh;
-    }
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .sobre, .servicos, .galeria, .contato {
-        padding: 30px 10px;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 70%;
-    }
-
-    footer {
-        background: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 470px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 47vh;
-    }
-
-    .videoloc {
-        height: auto;
-        width: 90%;
-    }
-}
-
-@media (max-width: 450px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 45vh;
-    }
-}
-
-@media (max-width: 410px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 40vh;
-    }
-
-    footer {
-        background: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 380px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 38vh;
-    }
-}
-
-@media (max-width: 360px) {
-    .hero {
-        background-size: contain;
-        background-position: center top; 
-        height: 36vh;
-    }
-}
-
-@media (max-width: 320px) {
-    .hero {
-        background-size: contain;
-        background-position: center top;
-        height: 32vh;
-    }
+.deleteButton:hover {
+    background-color: #CCC;
 }
