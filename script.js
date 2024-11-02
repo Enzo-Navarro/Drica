@@ -92,3 +92,14 @@ document.querySelector('.todo__searchIcon').addEventListener('click', () => setT
 
 // Carrega as tarefas ao iniciar a página
 window.onload = loadTasksOnPageLoad;
+
+//parte de celular
+const searchIcon = document.querySelector('.todo__searchIcon');
+
+if (searchIcon) {
+    // Adiciona suporte para clique e toque em dispositivos móveis
+    searchIcon.addEventListener('click', () => setTaskOnScreen());
+    searchIcon.addEventListener('touchstart', () => setTaskOnScreen());
+} else {
+    console.error("Elemento '.todo__searchIcon' não encontrado.");
+}
