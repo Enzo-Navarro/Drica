@@ -242,7 +242,15 @@ footer {
         background-position: center top;
         height: 250px;
     }
-    .card {
-        font-size: 8px;
+    h3 {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    a {
+        font-size: 10px;
     }
 }
