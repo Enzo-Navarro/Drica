@@ -49,7 +49,7 @@ function enviarWhatsApp() {
     // Formatar mensagem para o WhatsApp
     const textoMensagem = `Olá, meu nome é ${nome}%0A ${mensagem}`;
 
-    const telefone = "5522997750517";
+    const telefone = "5522998853828";
 
     // Criar a URL para o WhatsApp
     const urlWhatsApp = `https://api.whatsapp.com/send?phone=${telefone}&text=${textoMensagem}`;
