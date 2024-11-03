@@ -61,7 +61,7 @@ nav {
     background: no-repeat;
     background-position: center top;
     background-size: cover; 
-    height: 100vh; 
+    height: 800px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,6 +202,14 @@ footer {
     padding: 10px 0;
 }
 
+@media (max-width: 1024px) {
+    .hero {
+        background-size: cover;
+        background-position: center top;
+        height: 500px;
+    }
+}
+
 @media (max-width: 768px) {
     .menu ul {
         flex-direction: column;
@@ -227,7 +235,7 @@ footer {
     .hero {
         background-size: cover;
         background-position: center top;
-        height: 100px;
+        height: 390px;
     }
 
     .videoloc {
