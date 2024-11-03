@@ -242,6 +242,7 @@ footer {
         background-position: center top;
         height: 250px;
     }
+
     h3 {
         font-size: 12px;
     }
@@ -251,6 +252,10 @@ footer {
     }
 
     a {
+        font-size: 10px;
+    }
+
+    footer {
         font-size: 10px;
     }
 }
