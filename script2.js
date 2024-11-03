@@ -18,8 +18,8 @@ const heroSection = document.querySelector('.hero');
 
 // Array com as imagens
 const imagens = [
-    'Assets/Jurassic Park 7 metros.jpeg',
-    'Assets/Safari do Mickey 7 metros.jpeg'
+    'Assets/pegue e monte Branca de Neve.jpeg',
+    'Assets/pegue e monte Mickey.jpeg'
 ];
 
 let imagemAtual = 0;

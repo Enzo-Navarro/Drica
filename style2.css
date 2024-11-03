@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+}
+
+.hero {
+    background: no-repeat;
+    background-position: center top;
+    background-size: cover; 
+    height: 1200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.sobre, .servicos, .galeria, .contato {
+    padding: 50px 20px;
+    text-align: center;
+    position: center top;
+}
+
+.sobre .container, .servicos .container, .galeria .container, .contato .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.servico-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.saiba-mais {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.1rem;
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
+}
+
+/* Efeito ao passar o mouse */
+.saiba-mais:hover {
+    background-color: #e68900; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+/* Efeito ao clicar */
+.saiba-mais:active {
+    transform: scale(0.95); /* Reduz o botão ao clicar */
+}
+
+#imagens-adicionais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px; /* Espaçamento entre o botão e as imagens adicionais */
+}
+
+#imagens-adicionais img {
+    width: 100%;
+    height: auto;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.videoloc {
+    margin-top: 10px;
+    height: auto;
+    width: 50%;
+}
+
+.contato__titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp {
+    width: 35px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button.btnn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.1rem;
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
+    
+}
+
+/* Efeito ao passar o mouse */
+.btnn:hover {
+    background-color: green; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        background-size: cover;
+        background-position: center top;
+        height: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        background: #333;
+        right: 0;
+        top: 70px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        background-size: cover;
+        background-position: center top;
+        height: 600px;
+    }
+
+    .videoloc {
+        height: auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background-size: cover;
+        background-position: center top;
+        height: 350 px;
+    }
+
+    .servico-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero {
+        background-size: cover;
+        background-position: center top;
+        height: 300px;
+    }
+}
