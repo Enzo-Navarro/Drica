@@ -209,7 +209,7 @@ footer {
         position: absolute;
         background: #333;
         right: 0;
-        top: 12%;
+        top: 70px;
         padding-bottom: 10px;
         padding-right: 15px;
         gap: 5px;
@@ -243,16 +243,9 @@ footer {
         height: 250px;
     }
 
-    h3 {
-        font-size: 12px;
-    }
-
-    p {
-        font-size: 10px;
-    }
-
-    a {
-        font-size: 10px;
+    .servico-cards {
+        display: flex;
+        flex-direction: column;
     }
 
     footer {
