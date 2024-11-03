@@ -163,6 +163,15 @@ nav {
     width: 50%;
 }
 
+.contato__titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp {
+    width: 35px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -258,5 +267,13 @@ footer {
 
     footer {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero {
+        background-size: cover;
+        background-position: center top;
+        height: 200px;
     }
 }
